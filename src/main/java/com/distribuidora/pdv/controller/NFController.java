@@ -1,6 +1,6 @@
 package com.distribuidora.pdv.controller;
 
-import com.distribuidora.service.NFService;
+import com.distribuidora.pdv.service.NFService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

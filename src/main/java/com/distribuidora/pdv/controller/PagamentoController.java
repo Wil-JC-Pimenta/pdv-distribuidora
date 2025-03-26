@@ -1,7 +1,7 @@
 package com.distribuidora.pdv.controller;
 
-import com.distribuidora.model.Pagamento;
-import com.distribuidora.service.PagamentoService;
+import com.distribuidora.pdv.model.Pagamento;
+import com.distribuidora.pdv.service.PagamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

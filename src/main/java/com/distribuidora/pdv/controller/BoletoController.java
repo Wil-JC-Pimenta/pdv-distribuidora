@@ -2,7 +2,7 @@ package com.distribuidora.pdv.controller;
 
 
 
-import com.distribuidora.service.BoletoService;
+import com.distribuidora.pdv.service.BoletoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

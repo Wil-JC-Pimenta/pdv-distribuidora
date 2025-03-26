@@ -1,8 +1,8 @@
 package com.distribuidora.pdv.controller;
 
 
-import com.distribuidora.model.Venda;
-import com.distribuidora.service.VendaService;
+import com.distribuidora.pdv.model.Venda;
+import com.distribuidora.pdv.service.VendaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
