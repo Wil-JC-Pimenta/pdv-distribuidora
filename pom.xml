@@ -58,13 +58,11 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<!-- OpenPix SDK Dependency -->
 		<dependency>
-			<groupId>br.com.openpix</groupId>
-			<artifactId>java-sdk</artifactId>
-			<version>0.0.13</version>
+			<groupId>org.springframework.ai</groupId>
+			<artifactId>spring-ai-openai-spring-boot-starter</artifactId>
 		</dependency>
+
 
 
 	</dependencies>
