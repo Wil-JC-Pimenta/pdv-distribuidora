@@ -1,0 +1,8 @@
+version: '3'
+services:
+  pdv:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - openpix.api.key=SEU_API_KEY_AQUI

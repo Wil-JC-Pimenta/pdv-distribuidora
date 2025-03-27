@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDV Bebidas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background: #35424a;
+        color: #ffffff;
+        padding: 10px 0;
+        text-align: center;
+      }
+      main {
+        padding: 20px;
+      }
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        background: #35424a;
+        color: #ffffff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Bem-vindo ao PDV Bebidas</h1>
+    </header>
+    <main>
+      <h2>Teste a Aplicação</h2>
+      <form id="testForm">
+        <label for="endpoint">Endpoint:</label>
+        <input type="text" id="endpoint" name="endpoint" required />
+        <br />
+        <label for="jsonInput">JSON:</label>
+        <textarea id="jsonInput" name="jsonInput" rows="4" required></textarea>
+        <br />
+        <button type="submit">Enviar Requisição</button>
+      </form>
+      <div id="response"></div>
+    </main>
+    <footer>
+      <p>&copy; 2023 PDV Bebidas</p>
+    </footer>
+    <script>
+      document
+        .getElementById("testForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const endpoint = document.getElementById("endpoint").value;
+          const jsonInput = document.getElementById("jsonInput").value;
+
+          fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: jsonInput
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              document.getElementById("response").innerText = JSON.stringify(
+                data,
+                null,
+                2
+              );
+            })
+            .catch((error) => {
+              document.getElementById("response").innerText = "Error: " + error;
+            });
+        });
+    </script>
+
+    <h1>Bem-vindo ao PDV Bebidas!</h1>
+    <nav>
+      <ul>
+        <li><a href="/vendas">Vendas</a></li>
+        <li><a href="/produtos">Produtos</a></li>
+        <li><a href="/boletos">Boletos</a></li>
+        <li><a href="/nf">NF</a></li>
+        <li><a href="/pagamentos">Pagamentos</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pdv-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pdv
+  template:
+    metadata:
+      labels:
+        app: pdv
+    spec:
+      containers:
+        - name: pdv
+          image: pdv-bebidas:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: openpix.api.key
+              value: "SEU_API_KEY_AQUI"
